@@ -1,10 +1,3 @@
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0): alert.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- * --------------------------------------------------------------------------
- */
-
 import {
     defineJQueryPlugin,
     emulateTransitionEnd,
@@ -15,11 +8,6 @@ import {
   import EventHandler from './dom/event-handler'
   import BaseComponent from './base-component'
   
-  /**
-   * ------------------------------------------------------------------------
-   * Constants
-   * ------------------------------------------------------------------------
-   */
   
   const NAME = 'alert'
   const DATA_KEY = 'bs.alert'
@@ -36,20 +24,13 @@ import {
   const CLASS_NAME_FADE = 'fade'
   const CLASS_NAME_SHOW = 'show'
   
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
   
   class Alert extends BaseComponent {
-    // Getters
   
     static get DATA_KEY() {
       return DATA_KEY
     }
   
-    // Public
   
     close(element) {
       const rootElement = element ? this._getRootElement(element) : this._element
@@ -62,7 +43,6 @@ import {
       this._removeElement(rootElement)
     }
   
-    // Private
   
     _getRootElement(element) {
       return getElementFromSelector(element) || element.closest(`.${CLASS_NAME_ALERT}`)
@@ -94,7 +74,6 @@ import {
       EventHandler.trigger(element, EVENT_CLOSED)
     }
   
-    // Static
   
     static jQueryInterface(config) {
       return this.each(function () {
@@ -121,20 +100,9 @@ import {
     }
   }
   
-  /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
-   */
   
   EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DISMISS, Alert.handleDismiss(new Alert()))
   
-  /**
-   * ------------------------------------------------------------------------
-   * jQuery
-   * ------------------------------------------------------------------------
-   * add .Alert to jQuery only if jQuery is present
-   */
   
   defineJQueryPlugin(NAME, Alert)
   

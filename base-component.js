@@ -1,18 +1,5 @@
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0): base-component.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- * --------------------------------------------------------------------------
- */
-
 import Data from './dom/data'
 import EventHandler from './dom/event-handler'
-
-/**
- * ------------------------------------------------------------------------
- * Constants
- * ------------------------------------------------------------------------
- */
 
 const VERSION = '5.0.0'
 
