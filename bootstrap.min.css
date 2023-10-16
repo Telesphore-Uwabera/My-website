@@ -18,7 +18,7 @@
     --bs-white: #fff;
     --bs-gray: #6c757d;
     --bs-gray-dark: #343a40;
-    --bs-primary: #6244C5;
+    --bs-primary: blue;
     --bs-secondary: #FFC448;
     --bs-success: #198754;
     --bs-info: #0dcaf0;
@@ -193,12 +193,12 @@ sup {
 }
 
 a {
-    color: #6244C5;
+    color: blue;
     text-decoration: none
 }
 
 a:hover {
-    color: #4e369e
+    color: blue
 }
 
 a:not([href]):not([class]),a:not([href]):not([class]):hover {
@@ -2339,8 +2339,8 @@ textarea.form-control-lg {
 }
 
 .form-check-input:checked {
-    background-color: #6244C5;
-    border-color: #6244C5
+    background-color: blue;
+    border-color: blue
 }
 
 .form-check-input:checked[type="checkbox"] {
@@ -2352,8 +2352,8 @@ textarea.form-control-lg {
 }
 
 .form-check-input[type="checkbox"]:indeterminate {
-    background-color: #6244C5;
-    border-color: #6244C5;
+    background-color: blue;
+    border-color: blue;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e")
 }
 
@@ -2440,7 +2440,7 @@ textarea.form-control-lg {
     width: 1rem;
     height: 1rem;
     margin-top: -.25rem;
-    background-color: #6244C5;
+    background-color: blue;
     border: 0;
     border-radius: 1rem;
     transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
@@ -2470,7 +2470,7 @@ textarea.form-control-lg {
 .form-range::-moz-range-thumb {
     width: 1rem;
     height: 1rem;
-    background-color: #6244C5;
+    background-color: blue;
     border: 0;
     border-radius: 1rem;
     transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
@@ -2849,8 +2849,8 @@ textarea.form-control-lg {
 
 .btn-primary {
     color: #fff;
-    background-color: #6244C5;
-    border-color: #6244C5
+    background-color: blue;
+    border-color: blue
 }
 
 .btn-primary:hover {
@@ -2878,8 +2878,8 @@ textarea.form-control-lg {
 
 .btn-primary:disabled,.btn-primary.disabled {
     color: #fff;
-    background-color: #6244C5;
-    border-color: #6244C5
+    background-color: blue;
+    border-color: blue
 }
 
 .btn-secondary {
@@ -3128,14 +3128,14 @@ textarea.form-control-lg {
 }
 
 .btn-outline-primary {
-    color: #6244C5;
-    border-color: #6244C5
+    color: blue;
+    border-color: blue
 }
 
 .btn-outline-primary:hover {
     color: #fff;
-    background-color: #6244C5;
-    border-color: #6244C5
+    background-color: blue;
+    border-color: blue
 }
 
 .btn-check:focus+.btn-outline-primary,.btn-outline-primary:focus {
@@ -3144,8 +3144,8 @@ textarea.form-control-lg {
 
 .btn-check:checked+.btn-outline-primary,.btn-check:active+.btn-outline-primary,.btn-outline-primary:active,.btn-outline-primary.active,.btn-outline-primary.dropdown-toggle.show {
     color: #fff;
-    background-color: #6244C5;
-    border-color: #6244C5
+    background-color: blue;
+    border-color: blue
 }
 
 .btn-check:checked+.btn-outline-primary:focus,.btn-check:active+.btn-outline-primary:focus,.btn-outline-primary:active:focus,.btn-outline-primary.active:focus,.btn-outline-primary.dropdown-toggle.show:focus {
@@ -3153,7 +3153,7 @@ textarea.form-control-lg {
 }
 
 .btn-outline-primary:disabled,.btn-outline-primary.disabled {
-    color: #6244C5;
+    color: blue;
     background-color: transparent
 }
 
@@ -3369,7 +3369,7 @@ textarea.form-control-lg {
 
 .btn-link {
     font-weight: 400;
-    color: #6244C5;
+    color: blue;
     text-decoration: none
 }
 
@@ -3701,7 +3701,7 @@ textarea.form-control-lg {
 .dropdown-item.active,.dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #6244C5
+    background-color: blue
 }
 
 .dropdown-item.disabled,.dropdown-item:disabled {
@@ -3746,7 +3746,7 @@ textarea.form-control-lg {
 
 .dropdown-menu-dark .dropdown-item.active,.dropdown-menu-dark .dropdown-item:active {
     color: #fff;
-    background-color: #6244C5
+    background-color: blue
 }
 
 .dropdown-menu-dark .dropdown-item.disabled,.dropdown-menu-dark .dropdown-item:disabled {
@@ -3862,7 +3862,7 @@ textarea.form-control-lg {
 .nav-link {
     display: block;
     padding: .5rem 1rem;
-    color: #6244C5;
+    color: blue;
     transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out
 }
 
@@ -3925,7 +3925,7 @@ textarea.form-control-lg {
 
 .nav-pills .nav-link.active,.nav-pills .show>.nav-link {
     color: #fff;
-    background-color: #6244C5
+    background-color: blue
 }
 
 .nav-fill>.nav-link,.nav-fill .nav-item {
@@ -4649,7 +4649,7 @@ textarea.form-control-lg {
 .page-link {
     position: relative;
     display: block;
-    color: #6244C5;
+    color: blue;
     background-color: #fff;
     border: 1px solid #dee2e6;
     transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
@@ -4683,8 +4683,8 @@ textarea.form-control-lg {
 .page-item.active .page-link {
     z-index: 3;
     color: #fff;
-    background-color: #6244C5;
-    border-color: #6244C5
+    background-color: blue;
+    border-color: blue
 }
 
 .page-item.disabled .page-link {
@@ -4891,7 +4891,7 @@ textarea.form-control-lg {
     color: #fff;
     text-align: center;
     white-space: nowrap;
-    background-color: #6244C5;
+    background-color: blue;
     transition: width 0.6s ease
 }
 
@@ -4980,8 +4980,8 @@ textarea.form-control-lg {
 .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: #6244C5;
-    border-color: #6244C5
+    background-color: blue;
+    border-color: blue
 }
 
 .list-group-item+.list-group-item {
@@ -6321,7 +6321,7 @@ textarea.form-control-lg {
 }
 
 .link-primary {
-    color: #6244C5
+    color: blue
 }
 
 .link-primary:hover,.link-primary:focus {
@@ -6738,7 +6738,7 @@ textarea.form-control-lg {
 }
 
 .border-primary {
-    border-color: #6244C5 !important
+    border-color: blue !important
 }
 
 .border-secondary {
@@ -7715,7 +7715,7 @@ textarea.form-control-lg {
 }
 
 .text-primary {
-    color: #6244C5 !important
+    color: blue !important
 }
 
 .text-secondary {
@@ -7771,7 +7771,7 @@ textarea.form-control-lg {
 }
 
 .bg-primary {
-    background-color: #6244C5 !important
+    background-color: blue !important
 }
 
 .bg-secondary {
