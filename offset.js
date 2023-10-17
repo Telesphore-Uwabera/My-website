@@ -1,4 +1,4 @@
-import getBasePlacement from "../utils/getBasePlacement.js";
+import getBasePlacement from "./getBasePlacement.js";
 import { top, left, right, placements } from "../enums.js";
 export function distanceAndSkiddingToXY(placement, rects, offset) {
   var basePlacement = getBasePlacement(placement);

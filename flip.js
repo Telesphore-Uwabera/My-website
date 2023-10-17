@@ -1,10 +1,10 @@
-import getOppositePlacement from "../utils/getOppositePlacement.js";
-import getBasePlacement from "../utils/getBasePlacement.js";
-import getOppositeVariationPlacement from "../utils/getOppositeVariationPlacement.js";
-import detectOverflow from "../utils/detectOverflow.js";
-import computeAutoPlacement from "../utils/computeAutoPlacement.js";
+import getOppositePlacement from "./getOppositePlacement.js";
+import getBasePlacement from "./getBasePlacement.js";
+import getOppositeVariationPlacement from "./getOppositeVariationPlacement.js";
+import detectOverflow from "./detectOverflow.js";
+import computeAutoPlacement from "./computeAutoPlacement.js";
 import { bottom, top, start, right, left, auto } from "../enums.js";
-import getVariation from "../utils/getVariation.js"; // eslint-disable-next-line import/no-unused-modules
+import getVariation from "./getVariation.js"; // eslint-disable-next-line import/no-unused-modules
 
 function getExpandedFallbackPlacements(placement) {
   if (getBasePlacement(placement) === auto) {

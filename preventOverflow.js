@@ -1,14 +1,14 @@
 import { top, left, right, bottom, start } from "../enums.js";
-import getBasePlacement from "../utils/getBasePlacement.js";
-import getMainAxisFromPlacement from "../utils/getMainAxisFromPlacement.js";
-import getAltAxis from "../utils/getAltAxis.js";
-import within from "../utils/within.js";
-import getLayoutRect from "../dom-utils/getLayoutRect.js";
-import getOffsetParent from "../dom-utils/getOffsetParent.js";
-import detectOverflow from "../utils/detectOverflow.js";
-import getVariation from "../utils/getVariation.js";
-import getFreshSideObject from "../utils/getFreshSideObject.js";
-import { max as mathMax, min as mathMin } from "../utils/math.js";
+import getBasePlacement from "./getBasePlacement.js";
+import getMainAxisFromPlacement from "./getMainAxisFromPlacement.js";
+import getAltAxis from "./getAltAxis.js";
+import within from "./within.js";
+import getLayoutRect from "./getLayoutRect.js";
+import getOffsetParent from "./getOffsetParent.js";
+import detectOverflow from "./detectOverflow.js";
+import getVariation from "./getVariation.js";
+import getFreshSideObject from "./getFreshSideObject.js";
+import { max as mathMax, min as mathMin } from "./math.js";
 
 function preventOverflow(_ref) {
   var state = _ref.state,

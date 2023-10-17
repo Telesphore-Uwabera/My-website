@@ -1,8 +1,8 @@
 import { popperGenerator, detectOverflow } from "./createPopper.js";
-import eventListeners from "./modifiers/eventListeners.js";
-import popperOffsets from "./modifiers/popperOffsets.js";
-import computeStyles from "./modifiers/computeStyles.js";
-import applyStyles from "./modifiers/applyStyles.js";
+import eventListeners from "./eventListeners.js";
+import popperOffsets from "./popperOffsets.js";
+import computeStyles from "./computeStyles.js";
+import applyStyles from "./applyStyles.js";
 var defaultModifiers = [eventListeners, popperOffsets, computeStyles, applyStyles];
 var createPopper = /*#__PURE__*/popperGenerator({
   defaultModifiers: defaultModifiers

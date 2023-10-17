@@ -1,10 +1,10 @@
 import { top, left, right, bottom } from "../enums.js";
-import getOffsetParent from "../dom-utils/getOffsetParent.js";
-import getWindow from "../dom-utils/getWindow.js";
-import getDocumentElement from "../dom-utils/getDocumentElement.js";
-import getComputedStyle from "../dom-utils/getComputedStyle.js";
-import getBasePlacement from "../utils/getBasePlacement.js";
-import { round } from "../utils/math.js"; // eslint-disable-next-line import/no-unused-modules
+import getOffsetParent from "./getOffsetParent.js";
+import getWindow from "./getWindow.js";
+import getDocumentElement from "./getDocumentElement.js";
+import getComputedStyle from "./getComputedStyle.js";
+import getBasePlacement from "./getBasePlacement.js";
+import { round } from "./math.js"; // eslint-disable-next-line import/no-unused-modules
 
 var unsetSides = {
   top: 'auto',

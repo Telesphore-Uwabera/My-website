@@ -8,8 +8,8 @@ import {
     reflow,
     triggerTransitionEnd,
     typeCheckConfig
-  } from './util/index'
-  import Data from './dom/data'
+  } from './index'
+  import Data from './data'
   import EventHandler from './event-handler'
   import Manipulator from './manipulator'
   import SelectorEngine from './selector-engine'

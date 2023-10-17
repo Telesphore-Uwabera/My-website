@@ -1,4 +1,4 @@
-import computeOffsets from "../utils/computeOffsets.js";
+import computeOffsets from "./computeOffsets.js";
 
 function popperOffsets(_ref) {
   var state = _ref.state,

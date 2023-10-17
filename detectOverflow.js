@@ -1,6 +1,6 @@
-import getBoundingClientRect from "../dom-utils/getBoundingClientRect.js";
-import getClippingRect from "../dom-utils/getClippingRect.js";
-import getDocumentElement from "../dom-utils/getDocumentElement.js";
+import getBoundingClientRect from "./getBoundingClientRect.js";
+import getClippingRect from "./getClippingRect.js";
+import getDocumentElement from "./getDocumentElement.js";
 import computeOffsets from "./computeOffsets.js";
 import rectToClientRect from "./rectToClientRect.js";
 import { clippingParents, reference, popper, bottom, top, right, basePlacements, viewport } from "../enums.js";

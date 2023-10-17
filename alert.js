@@ -3,9 +3,9 @@ import {
     emulateTransitionEnd,
     getElementFromSelector,
     getTransitionDurationFromElement
-  } from './util/index'
-  import Data from './dom/data'
-  import EventHandler from './dom/event-handler'
+  } from './index'
+  import Data from './data'
+  import EventHandler from './event-handler'
   import BaseComponent from './base-component'
   
   

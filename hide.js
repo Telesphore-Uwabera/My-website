@@ -1,5 +1,5 @@
 import { top, bottom, left, right } from "../enums.js";
-import detectOverflow from "../utils/detectOverflow.js";
+import detectOverflow from "./detectOverflow.js";
 
 function getSideOffsets(overflow, rect, preventedOffsets) {
   if (preventedOffsets === void 0) {

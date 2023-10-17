@@ -4,10 +4,10 @@ import {
     getUID,
     isElement,
     typeCheckConfig
-  } from './util/index'
-  import EventHandler from './dom/event-handler'
-  import Manipulator from './dom/manipulator'
-  import SelectorEngine from './dom/selector-engine'
+  } from './index'
+  import EventHandler from './event-handler'
+  import Manipulator from './manipulator'
+  import SelectorEngine from './selector-engine'
   import BaseComponent from './base-component'
   
   const NAME = 'scrollspy'

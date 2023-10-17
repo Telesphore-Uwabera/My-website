@@ -1,13 +1,13 @@
-import getBasePlacement from "../utils/getBasePlacement.js";
-import getLayoutRect from "../dom-utils/getLayoutRect.js";
-import contains from "../dom-utils/contains.js";
-import getOffsetParent from "../dom-utils/getOffsetParent.js";
-import getMainAxisFromPlacement from "../utils/getMainAxisFromPlacement.js";
-import within from "../utils/within.js";
-import mergePaddingObject from "../utils/mergePaddingObject.js";
-import expandToHashMap from "../utils/expandToHashMap.js";
+import getBasePlacement from "./getBasePlacement.js";
+import getLayoutRect from "./getLayoutRect.js";
+import contains from "./contains.js";
+import getOffsetParent from "./getOffsetParent.js";
+import getMainAxisFromPlacement from "./getMainAxisFromPlacement.js";
+import within from "./within.js";
+import mergePaddingObject from "./mergePaddingObject.js";
+import expandToHashMap from "./expandToHashMap.js";
 import { left, right, basePlacements, top, bottom } from "../enums.js";
-import { isHTMLElement } from "../dom-utils/instanceOf.js"; // eslint-disable-next-line import/no-unused-modules
+import { isHTMLElement } from "./instanceOf.js"; // eslint-disable-next-line import/no-unused-modules
 
 var toPaddingObject = function toPaddingObject(padding, state) {
   padding = typeof padding === 'function' ? padding(Object.assign({}, state.rects, {
