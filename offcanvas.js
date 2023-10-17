@@ -1,10 +1,3 @@
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0): offcanvas.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * --------------------------------------------------------------------------
- */
-
 import {
     defineJQueryPlugin,
     emulateTransitionEnd,
@@ -21,12 +14,6 @@ import {
   import SelectorEngine from './dom/selector-engine'
   import Manipulator from './dom/manipulator'
   import Backdrop from './util/backdrop'
-  
-  /**
-   * ------------------------------------------------------------------------
-   * Constants
-   * ------------------------------------------------------------------------
-   */
   
   const NAME = 'offcanvas'
   const DATA_KEY = 'bs.offcanvas'
@@ -60,13 +47,6 @@ import {
   const EVENT_KEYDOWN_DISMISS = `keydown.dismiss${EVENT_KEY}`
   
   const SELECTOR_DATA_DISMISS = '[data-bs-dismiss="offcanvas"]'
-  const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="offcanvas"]'
-  
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
   
   class Offcanvas extends BaseComponent {
     constructor(element, config) {
@@ -78,8 +58,6 @@ import {
       this._addEventListeners()
     }
   
-    // Getters
-  
     static get Default() {
       return Default
     }
@@ -87,8 +65,6 @@ import {
     static get DATA_KEY() {
       return DATA_KEY
     }
-  
-    // Public
   
     toggle(relatedTarget) {
       return this._isShown ? this.hide() : this.show(relatedTarget)
@@ -216,8 +192,6 @@ import {
       })
     }
   
-    // Static
-  
     static jQueryInterface(config) {
       return this.each(function () {
         const data = Data.get(this, DATA_KEY) || new Offcanvas(this, typeof config === 'object' ? config : {})
@@ -235,12 +209,6 @@ import {
     }
   }
   
-  /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
-   */
-  
   EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
     const target = getElementFromSelector(this)
   
@@ -253,13 +221,11 @@ import {
     }
   
     EventHandler.one(target, EVENT_HIDDEN, () => {
-      // focus on trigger when it is closed
       if (isVisible(this)) {
         this.focus()
       }
     })
-  
-    // avoid conflict when clicking a toggler of an offcanvas, while another is open
+
     const allReadyOpen = SelectorEngine.findOne(OPEN_SELECTOR)
     if (allReadyOpen && allReadyOpen !== target) {
       Offcanvas.getInstance(allReadyOpen).hide()
@@ -273,12 +239,6 @@ import {
   EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
     SelectorEngine.find(OPEN_SELECTOR).forEach(el => (Data.get(el, DATA_KEY) || new Offcanvas(el)).show())
   })
-  
-  /**
-   * ------------------------------------------------------------------------
-   * jQuery
-   * ------------------------------------------------------------------------
-   */
   
   defineJQueryPlugin(NAME, Offcanvas)
   

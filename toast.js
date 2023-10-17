@@ -1,27 +1,14 @@
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0): toast.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- * --------------------------------------------------------------------------
- */
-
 import {
     defineJQueryPlugin,
     emulateTransitionEnd,
     getTransitionDurationFromElement,
     reflow,
     typeCheckConfig
-  } from './util/index'
-  import Data from './dom/data'
-  import EventHandler from './dom/event-handler'
-  import Manipulator from './dom/manipulator'
+  } from './index'
+  import Data from './data'
+  import EventHandler from './event-handler'
+  import Manipulator from './manipulator'
   import BaseComponent from './base-component'
-  
-  /**
-   * ------------------------------------------------------------------------
-   * Constants
-   * ------------------------------------------------------------------------
-   */
   
   const NAME = 'toast'
   const DATA_KEY = 'bs.toast'
@@ -52,11 +39,6 @@ import {
   
   const SELECTOR_DATA_DISMISS = '[data-bs-dismiss="toast"]'
   
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
   
   class Toast extends BaseComponent {
     constructor(element, config) {
@@ -67,7 +49,6 @@ import {
       this._setListeners()
     }
   
-    // Getters
   
     static get DefaultType() {
       return DefaultType
@@ -80,8 +61,7 @@ import {
     static get DATA_KEY() {
       return DATA_KEY
     }
-  
-    // Public
+
   
     show() {
       const showEvent = EventHandler.trigger(this._element, EVENT_SHOW)
@@ -160,8 +140,6 @@ import {
       this._config = null
     }
   
-    // Private
-  
     _getConfig(config) {
       config = {
         ...Default,
@@ -182,8 +160,7 @@ import {
       clearTimeout(this._timeout)
       this._timeout = null
     }
-  
-    // Static
+
   
     static jQueryInterface(config) {
       return this.each(function () {
@@ -204,13 +181,6 @@ import {
       })
     }
   }
-  
-  /**
-   * ------------------------------------------------------------------------
-   * jQuery
-   * ------------------------------------------------------------------------
-   * add .Toast to jQuery only if jQuery is present
-   */
   
   defineJQueryPlugin(NAME, Toast)
   

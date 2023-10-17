@@ -1,10 +1,3 @@
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0): carousel.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- * --------------------------------------------------------------------------
- */
-
 import {
     defineJQueryPlugin,
     emulateTransitionEnd,
@@ -17,16 +10,11 @@ import {
     typeCheckConfig
   } from './util/index'
   import Data from './dom/data'
-  import EventHandler from './dom/event-handler'
-  import Manipulator from './dom/manipulator'
-  import SelectorEngine from './dom/selector-engine'
+  import EventHandler from './event-handler'
+  import Manipulator from './manipulator'
+  import SelectorEngine from './selector-engine'
   import BaseComponent from './base-component'
   
-  /**
-   * ------------------------------------------------------------------------
-   * Constants
-   * ------------------------------------------------------------------------
-   */
   
   const NAME = 'carousel'
   const DATA_KEY = 'bs.carousel'
@@ -35,7 +23,7 @@ import {
   
   const ARROW_LEFT_KEY = 'ArrowLeft'
   const ARROW_RIGHT_KEY = 'ArrowRight'
-  const TOUCHEVENT_COMPAT_WAIT = 500 // Time for mouse compat events to fire after touch
+  const TOUCHEVENT_COMPAT_WAIT = 500 
   const SWIPE_THRESHOLD = 40
   
   const Default = {
@@ -97,11 +85,6 @@ import {
   const POINTER_TYPE_TOUCH = 'touch'
   const POINTER_TYPE_PEN = 'pen'
   
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
   class Carousel extends BaseComponent {
     constructor(element, config) {
       super(element)
@@ -123,7 +106,7 @@ import {
       this._addEventListeners()
     }
   
-    // Getters
+
   
     static get Default() {
       return Default
@@ -133,7 +116,7 @@ import {
       return DATA_KEY
     }
   
-    // Public
+    
   
     next() {
       if (!this._isSliding) {
@@ -142,8 +125,7 @@ import {
     }
   
     nextWhenVisible() {
-      // Don't call next when the page isn't visible
-      // or the carousel or its parent isn't visible
+      
       if (!document.hidden && isVisible(this._element)) {
         this.next()
       }
@@ -227,7 +209,7 @@ import {
       super.dispose()
     }
   
-    // Private
+
   
     _getConfig(config) {
       config = {
@@ -281,7 +263,6 @@ import {
       }
   
       const move = event => {
-        // ensure swiping with one touch and not pinching
         this.touchDeltaX = event.touches && event.touches.length > 1 ?
           0 :
           event.touches[0].clientX - this.touchStartX
@@ -294,13 +275,6 @@ import {
   
         this._handleSwipe()
         if (this._config.pause === 'hover') {
-          // If it's a touch-enabled device, mouseenter/leave are fired as
-          // part of the mouse compatibility events on first tap - the carousel
-          // would stop cycling until user tapped out of it;
-          // here, we listen for touchend, explicitly pause the carousel
-          // (as if it's the second time we tap on it, mouseenter compat event
-          // is NOT fired) and after a timeout (to allow for mouse compatibility
-          // events to fire) we explicitly restart cycling
   
           this.pause()
           if (this.touchTimeout) {
@@ -441,7 +415,7 @@ import {
       }
   
       if (!activeElement || !nextElement) {
-        // Some weirdness is happening, so we bail
+
         return
       }
   
@@ -594,11 +568,7 @@ import {
     }
   }
   
-  /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
-   */
+ 
   
   EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_SLIDE, Carousel.dataApiClickHandler)
   
@@ -609,13 +579,6 @@ import {
       Carousel.carouselInterface(carousels[i], Data.get(carousels[i], DATA_KEY))
     }
   })
-  
-  /**
-   * ------------------------------------------------------------------------
-   * jQuery
-   * ------------------------------------------------------------------------
-   * add .Carousel to jQuery only if jQuery is present
-   */
   
   defineJQueryPlugin(NAME, Carousel)
   

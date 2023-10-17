@@ -1,10 +1,3 @@
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0): index.umd.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- * --------------------------------------------------------------------------
- */
-
 import Alert from './src/alert'
 import Button from './src/button'
 import Carousel from './src/carousel'

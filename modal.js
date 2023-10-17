@@ -1,10 +1,3 @@
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0): modal.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- * --------------------------------------------------------------------------
- */
-
 import {
     defineJQueryPlugin,
     emulateTransitionEnd,
@@ -191,12 +184,6 @@ import {
         .forEach(htmlElement => EventHandler.off(htmlElement, EVENT_KEY))
   
       super.dispose()
-  
-      /**
-       * `document` has 2 events `EVENT_FOCUSIN` and `EVENT_CLICK_DATA_API`
-       * Do not move `document` in `htmlElements` array
-       * It will remove `EVENT_CLICK_DATA_API` event that should remain
-       */
       EventHandler.off(document, EVENT_FOCUSIN)
   
       this._config = null
@@ -216,7 +203,7 @@ import {
   
     _initializeBackDrop() {
       return new Backdrop({
-        isVisible: Boolean(this._config.backdrop), // 'static' option will be translated to true, and booleans will keep their value
+        isVisible: Boolean(this._config.backdrop), 
         isAnimated: this._isAnimated()
       })
     }
@@ -236,7 +223,6 @@ import {
       const modalBody = SelectorEngine.findOne(SELECTOR_MODAL_BODY, this._dialog)
   
       if (!this._element.parentNode || this._element.parentNode.nodeType !== Node.ELEMENT_NODE) {
-        // Don't move modal's DOM position
         document.body.appendChild(this._element)
       }
   
@@ -282,7 +268,7 @@ import {
     }
   
     _enforceFocus() {
-      EventHandler.off(document, EVENT_FOCUSIN) // guard against infinite focus loop
+      EventHandler.off(document, EVENT_FOCUSIN)
       EventHandler.on(document, EVENT_FOCUSIN, event => {
         if (document !== event.target &&
             this._element !== event.target &&
@@ -381,11 +367,6 @@ import {
       emulateTransitionEnd(this._element, modalTransitionDuration)
       this._element.focus()
     }
-  
-    // ----------------------------------------------------------------------
-    // the following methods are used to handle overflowing modals
-    // ----------------------------------------------------------------------
-  
     _adjustDialog() {
       const isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight
       const scrollbarWidth = getScrollBarWidth()
@@ -423,13 +404,6 @@ import {
       })
     }
   }
-  
-  /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
-   */
-  
   EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
     const target = getElementFromSelector(this)
   
@@ -439,7 +413,6 @@ import {
   
     EventHandler.one(target, EVENT_SHOW, showEvent => {
       if (showEvent.defaultPrevented) {
-        // only register focus restorer if modal will actually get shown
         return
       }
   
@@ -454,14 +427,6 @@ import {
   
     data.toggle(this)
   })
-  
-  /**
-   * ------------------------------------------------------------------------
-   * jQuery
-   * ------------------------------------------------------------------------
-   * add .Modal to jQuery only if jQuery is present
-   */
-  
   defineJQueryPlugin(NAME, Modal)
   
   export default Modal

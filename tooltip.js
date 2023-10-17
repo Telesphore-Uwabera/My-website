@@ -1,11 +1,4 @@
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0): tooltip.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- * --------------------------------------------------------------------------
- */
-
-import * as Popper from '@popperjs/core'
+import * as Popper from '@popper.js/core'
 
 import {
   defineJQueryPlugin,
@@ -17,22 +10,16 @@ import {
   isRTL,
   noop,
   typeCheckConfig
-} from './util/index'
+} from './index'
 import {
   DefaultAllowlist,
   sanitizeHtml
-} from './util/sanitizer'
-import Data from './dom/data'
-import EventHandler from './dom/event-handler'
-import Manipulator from './dom/manipulator'
-import SelectorEngine from './dom/selector-engine'
+} from './sanitizer'
+import Data from './data'
+import EventHandler from './event-handler'
+import Manipulator from './manipulator'
+import SelectorEngine from './selector-engine'
 import BaseComponent from './base-component'
-
-/**
- * ------------------------------------------------------------------------
- * Constants
- * ------------------------------------------------------------------------
- */
 
 const NAME = 'tooltip'
 const DATA_KEY = 'bs.tooltip'
@@ -119,11 +106,6 @@ const TRIGGER_FOCUS = 'focus'
 const TRIGGER_CLICK = 'click'
 const TRIGGER_MANUAL = 'manual'
 
-/**
- * ------------------------------------------------------------------------
- * Class Definition
- * ------------------------------------------------------------------------
- */
 
 class Tooltip extends BaseComponent {
   constructor(element, config) {
@@ -132,22 +114,18 @@ class Tooltip extends BaseComponent {
     }
 
     super(element)
-
-    // private
     this._isEnabled = true
     this._timeout = 0
     this._hoverState = ''
     this._activeTrigger = {}
     this._popper = null
 
-    // Protected
     this.config = this._getConfig(config)
     this.tip = null
 
     this._setListeners()
   }
 
-  // Getters
 
   static get Default() {
     return Default
@@ -173,7 +151,6 @@ class Tooltip extends BaseComponent {
     return DefaultType
   }
 
-  // Public
 
   enable() {
     this._isEnabled = true
@@ -294,10 +271,6 @@ class Tooltip extends BaseComponent {
       tip.classList.add(...customClass.split(' '))
     }
 
-    // If this is a touch-enabled device we add extra
-    // empty mouseover listeners to the body's immediate children;
-    // only needed because of broken event delegation on iOS
-    // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
     if ('ontouchstart' in document.documentElement) {
       [].concat(...document.body.children).forEach(element => {
         EventHandler.on(element, 'mouseover', noop)
@@ -356,8 +329,6 @@ class Tooltip extends BaseComponent {
 
     tip.classList.remove(CLASS_NAME_SHOW)
 
-    // If this is a touch-enabled device we remove the extra
-    // empty mouseover listeners we added for iOS support
     if ('ontouchstart' in document.documentElement) {
       [].concat(...document.body.children)
         .forEach(element => EventHandler.off(element, 'mouseover', noop))
@@ -385,7 +356,6 @@ class Tooltip extends BaseComponent {
     }
   }
 
-  // Protected
 
   isWithContent() {
     return Boolean(this.getTitle())
@@ -419,7 +389,6 @@ class Tooltip extends BaseComponent {
         content = content[0]
       }
 
-      // content is a DOM node or a jQuery
       if (this.config.html) {
         if (content.parentNode !== element) {
           element.innerHTML = ''
@@ -467,7 +436,6 @@ class Tooltip extends BaseComponent {
     return attachment
   }
 
-  // Private
 
   _initializeOnDelegatedTarget(event, context) {
     const dataKey = this.constructor.DATA_KEY
@@ -762,7 +730,6 @@ class Tooltip extends BaseComponent {
     this._addAttachmentClass(this._getAttachment(state.placement))
   }
 
-  // Static
 
   static jQueryInterface(config) {
     return this.each(function () {
@@ -788,12 +755,6 @@ class Tooltip extends BaseComponent {
   }
 }
 
-/**
- * ------------------------------------------------------------------------
- * jQuery
- * ------------------------------------------------------------------------
- * add .Tooltip to jQuery only if jQuery is present
- */
 
 defineJQueryPlugin(NAME, Tooltip)
 

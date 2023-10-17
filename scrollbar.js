@@ -1,12 +1,5 @@
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0): util/scrollBar.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- * --------------------------------------------------------------------------
- */
-
-import SelectorEngine from '../dom/selector-engine'
-import Manipulator from '../dom/manipulator'
+import SelectorEngine from '../selector-engine'
+import Manipulator from '../manipulator'
 
 const SELECTOR_FIXED_CONTENT = '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top'
 const SELECTOR_STICKY_CONTENT = '.sticky-top'

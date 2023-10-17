@@ -1,10 +1,3 @@
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0): tab.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- * --------------------------------------------------------------------------
- */
-
 import {
     defineJQueryPlugin,
     emulateTransitionEnd,
@@ -12,17 +5,12 @@ import {
     getTransitionDurationFromElement,
     isDisabled,
     reflow
-  } from './util/index'
-  import Data from './dom/data'
-  import EventHandler from './dom/event-handler'
-  import SelectorEngine from './dom/selector-engine'
+  } from './index'
+  import Data from './data'
+  import EventHandler from './event-handler'
+  import SelectorEngine from './selector-engine'
   import BaseComponent from './base-component'
-  
-  /**
-   * ------------------------------------------------------------------------
-   * Constants
-   * ------------------------------------------------------------------------
-   */
+
   
   const NAME = 'tab'
   const DATA_KEY = 'bs.tab'
@@ -47,21 +35,15 @@ import {
   const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="tab"], [data-bs-toggle="pill"], [data-bs-toggle="list"]'
   const SELECTOR_DROPDOWN_TOGGLE = '.dropdown-toggle'
   const SELECTOR_DROPDOWN_ACTIVE_CHILD = ':scope > .dropdown-menu .active'
-  
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
+
   
   class Tab extends BaseComponent {
-    // Getters
+  
   
     static get DATA_KEY() {
       return DATA_KEY
     }
   
-    // Public
   
     show() {
       if ((this._element.parentNode &&
@@ -112,7 +94,6 @@ import {
       }
     }
   
-    // Private
   
     _activate(element, container, callback) {
       const activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ?
@@ -182,7 +163,6 @@ import {
       }
     }
   
-    // Static
   
     static jQueryInterface(config) {
       return this.each(function () {
@@ -199,11 +179,6 @@ import {
     }
   }
   
-  /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
-   */
   
   EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
     if (['A', 'AREA'].includes(this.tagName)) {
@@ -218,12 +193,6 @@ import {
     data.show()
   })
   
-  /**
-   * ------------------------------------------------------------------------
-   * jQuery
-   * ------------------------------------------------------------------------
-   * add .Tab to jQuery only if jQuery is present
-   */
   
   defineJQueryPlugin(NAME, Tab)
   

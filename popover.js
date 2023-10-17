@@ -1,20 +1,9 @@
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0): popover.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- * --------------------------------------------------------------------------
- */
 
-import { defineJQueryPlugin } from './util/index'
-import Data from './dom/data'
-import SelectorEngine from './dom/selector-engine'
+
+import { defineJQueryPlugin } from './index'
+import Data from './data'
+import SelectorEngine from './selector-engine'
 import Tooltip from './tooltip'
-
-/**
- * ------------------------------------------------------------------------
- * Constants
- * ------------------------------------------------------------------------
- */
 
 const NAME = 'popover'
 const DATA_KEY = 'bs.popover'
@@ -59,14 +48,8 @@ const CLASS_NAME_SHOW = 'show'
 const SELECTOR_TITLE = '.popover-header'
 const SELECTOR_CONTENT = '.popover-body'
 
-/**
- * ------------------------------------------------------------------------
- * Class Definition
- * ------------------------------------------------------------------------
- */
 
 class Popover extends Tooltip {
-  // Getters
 
   static get Default() {
     return Default
@@ -92,8 +75,6 @@ class Popover extends Tooltip {
     return DefaultType
   }
 
-  // Overrides
-
   isWithContent() {
     return this.getTitle() || this._getContent()
   }
@@ -101,7 +82,6 @@ class Popover extends Tooltip {
   setContent() {
     const tip = this.getTipElement()
 
-    // we use append for html objects to maintain js events
     this.setElementContent(SelectorEngine.findOne(SELECTOR_TITLE, tip), this.getTitle())
     let content = this._getContent()
     if (typeof content === 'function') {
@@ -113,7 +93,6 @@ class Popover extends Tooltip {
     tip.classList.remove(CLASS_NAME_FADE, CLASS_NAME_SHOW)
   }
 
-  // Private
 
   _addAttachmentClass(attachment) {
     this.getTipElement().classList.add(`${CLASS_PREFIX}-${this.updateAttachment(attachment)}`)
@@ -131,8 +110,6 @@ class Popover extends Tooltip {
         .forEach(tClass => tip.classList.remove(tClass))
     }
   }
-
-  // Static
 
   static jQueryInterface(config) {
     return this.each(function () {
@@ -159,12 +136,6 @@ class Popover extends Tooltip {
   }
 }
 
-/**
- * ------------------------------------------------------------------------
- * jQuery
- * ------------------------------------------------------------------------
- * add .Popover to jQuery only if jQuery is present
- */
 
 defineJQueryPlugin(NAME, Popover)
 

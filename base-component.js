@@ -1,5 +1,5 @@
-import Data from './dom/data'
-import EventHandler from './dom/event-handler'
+import Data from './data'
+import EventHandler from './event-handler'
 
 const VERSION = '5.0.0'
 

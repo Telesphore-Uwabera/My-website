@@ -1,10 +1,3 @@
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0): util/sanitizer.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- * --------------------------------------------------------------------------
- */
-
 const uriAttrs = new Set([
     'background',
     'cite',
@@ -17,19 +10,9 @@ const uriAttrs = new Set([
   ])
   
   const ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i
-  
-  /**
-   * A pattern that recognizes a commonly useful subset of URLs that are safe.
-   *
-   * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
-   */
+
   const SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^#&/:?]*(?:[#/?]|$))/i
   
-  /**
-   * A pattern that matches safe data URLs. Only matches image, video and audio types.
-   *
-   * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
-   */
   const DATA_URL_PATTERN = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[\d+/a-z]+=*$/i
   
   const allowedAttribute = (attr, allowedAttributeList) => {
@@ -44,8 +27,7 @@ const uriAttrs = new Set([
     }
   
     const regExp = allowedAttributeList.filter(attrRegex => attrRegex instanceof RegExp)
-  
-    // Check if a regular expression validates the attribute.
+
     for (let i = 0, len = regExp.length; i < len; i++) {
       if (regExp[i].test(attrName)) {
         return true
@@ -56,7 +38,6 @@ const uriAttrs = new Set([
   }
   
   export const DefaultAllowlist = {
-    // Global attributes allowed on any supplied element below.
     '*': ['class', 'dir', 'id', 'lang', 'role', ARIA_ATTRIBUTE_PATTERN],
     a: ['target', 'href', 'title', 'rel'],
     area: [],

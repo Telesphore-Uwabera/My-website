@@ -1,6 +1,6 @@
 
 
-import EventHandler from '../dom/event-handler'
+import EventHandler from '../event-handler'
 import { emulateTransitionEnd, execute, getTransitionDurationFromElement, reflow, typeCheckConfig } from './index'
 
 const Default = {
