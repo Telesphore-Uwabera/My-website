@@ -7,13 +7,13 @@ import {
     isVisible,
     reflow,
     typeCheckConfig
-  } from './util/index'
-  import EventHandler from './dom/event-handler'
-  import Manipulator from './dom/manipulator'
-  import SelectorEngine from './dom/selector-engine'
-  import { getWidth as getScrollBarWidth, hide as scrollBarHide, reset as scrollBarReset } from './util/scrollbar'
+  } from './index'
+  import EventHandler from './event-handler'
+  import Manipulator from './manipulator'
+  import SelectorEngine from './selector-engine'
+  import { getWidth as getScrollBarWidth, hide as scrollBarHide, reset as scrollBarReset } from './scrollbar'
   import BaseComponent from './base-component'
-  import Backdrop from './util/backdrop'
+  import Backdrop from './backdrop'
   
   /**
    * ------------------------------------------------------------------------
