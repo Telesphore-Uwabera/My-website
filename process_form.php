@@ -6,17 +6,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    // Define the file path where you want to store the data (index.php in this example)
-    $file_path = 'index.php';
+    // Define the file path where you want to store the data (form_data.txt in this example)
+    $file_path = 'form_data.txt';
 
     // Construct the data to be saved
     $data_to_store = "Name: $name\nEmail: $email\nSubject: $subject\nMessage: $message\n\n";
 
-    // Append the data to the file (You can modify this to store the data in a database)
-    file_put_contents($file_path, $data_to_store, FILE_APPEND);
-
-    // Redirect the user to a thank you page or any other page you want
-    header('Location: thank_you.php'); // Create a thank_you.php file with your thank you message
-    exit();
+    // Append the data to the file
+    if (file_put_contents($file_path, $data_to_store, FILE_APPEND) !== false) {
+        // Redirect the user to a thank you page
+        header('Location: thank_you.php');
+        exit();
+    } else {
+        echo "Error: Unable to save the data to the file.";
+    }
 }
 ?>
