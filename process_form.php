@@ -1,26 +1,47 @@
 <?php
-
-
+// Check if the form was submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Retrieve the form data
+    // Retrieve form data
     $name = $_POST['name'];
     $email = $_POST['email'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    // Define the file path where you want to store the data (form_data.txt in this example)
-    $file_path = 'form_data.txt';
-
-    // Construct the data to be saved
-    $data_to_store = "Name: $name\nEmail: $email\nSubject: $subject\nMessage: $message\n\n";
-
-    // Append the data to the file
-    if (file_put_contents($file_path, $data_to_store, FILE_APPEND) !== false) {
-        // Redirect the user to a thank you page
-        header('Location: thank_you.php');
-        exit();
-    } else {
-        echo "Error: Unable to save the data to the file.";
+    // Perform validation (you should add more detailed validation as needed)
+    if (empty($name) || empty($email) || empty($subject) || empty($message)) {
+        echo "All fields are required.";
+        // You may want to provide a link back to the form page
+        exit;
     }
+
+    // Establish a database connection (replace with your own database credentials)
+    $conn = new mysqli("localhost", "telesphoreuwabera", "91073@Tecy", "tecy");
+
+    // Check for connection errors
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Insert data into the database (replace 'your_table_name' with your table name)
+    $sql = "INSERT INTO process_form (name, email, subject, message) VALUES (?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+
+    // Bind the form data to the prepared statement
+    $stmt->bind_param("ssss", $name, $email, $subject, $message);
+
+    if ($stmt->execute()) {
+        // Data inserted successfully
+        echo "Form submitted successfully.";
+    } else {
+        // Handle the error
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    // Close the database connection
+    $stmt->close();
+    $conn->close();
+} else {
+    // Handle cases where the form was not submitted properly
+    echo "Form submission error.";
 }
 ?>
