@@ -471,7 +471,8 @@
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-    <form method="post" action="process_form.php"> <!-- Change the action attribute to the PHP script file -->
+    <form name="contact" method="POST" data-netlify="true" onSubmmit="submit" data-netlify-honeypot="bot-field">
+    <input class="d-none" name="bot-field"
         <div class="row g-3">
             <div class="col-md-6">
                 <div class="form-floating">
@@ -481,14 +482,14 @@
             </div>
             <div class="col-md-6">
                 <div class="form-floating">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
-                    <label for="email">Your Email</label>
+                    <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Your Email" required>
+                    <label for "email">Your Email</label>
                 </div>
             </div>
             <div class="col-12">
                 <div class="form-floating">
                     <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
-                    <label for "subject">Subject</label>
+                    <label for="subject">Subject</label>
                 </div>
             </div>
             <div class="col-12">
