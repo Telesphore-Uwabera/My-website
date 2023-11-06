@@ -4,7 +4,8 @@ Welcome to the repository for my personal website, where I showcase my skills, p
 
 You can visit the live website here: [Telesphore Uwabera - Personal Website](https://uwaberatelesphore.netlify.app/)
 
-![Telesphore Uwabera - Personal Website Screenshot](screenshot.png)
+![Telesphore Uwabera - Personal Website Screenshot](Screenshot 2023-11-06 102906.png
+)
 
 ## Table of Contents
 
