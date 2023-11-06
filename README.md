@@ -66,4 +66,4 @@ Thank you for visiting my personal website! Feel free to reach out if you have a
 
 LinkedIn | Email | GitHub
 
-Here is the link to my portifolio https://telesphore-uwabera.github.io/My-website/
+Here is the link to my portifolio [My website](https://uwaberatelesphore.netlify.app/)
