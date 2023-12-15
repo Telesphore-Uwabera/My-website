@@ -62,6 +62,6 @@ This project is licensed under the MIT License.
 
 Thank you for visiting my personal website! Feel free to reach out if you have any questions or would like to collaborate.
 
-LinkedIn | Email | GitHub
+[LinkedIn](https://www.linkedin.com/in/telesphore-uwabera-a31760251/) | [Email](uwaberatelesphore@gmail.com) | [GitHub](https://github.com/Telesphore-Uwabera/)
 
 Here is the link to [my Portifolio](https://uwaberatelesphore.netlify.app/)
