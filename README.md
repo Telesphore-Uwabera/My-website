@@ -2,7 +2,7 @@
 
 Welcome to the repository for my personal website, where I showcase my skills, projects, and contact information. This website serves as my digital portfolio and a way for people to get in touch with me.
 
-You can visit the live website here: [Telesphore Uwabera - Personal Website](https://uwaberatelesphore.netlify.app/)
+You can visit the live website here: [Personal Website](https://uwaberatelesphore.netlify.app/)
 
 ## Table of Contents
 
@@ -64,4 +64,4 @@ Thank you for visiting my personal website! Feel free to reach out if you have a
 
 LinkedIn | Email | GitHub
 
-Here is the link to my portifolio [My website](https://uwaberatelesphore.netlify.app/)
+Here is the link to [my Portifolio](https://uwaberatelesphore.netlify.app/)
