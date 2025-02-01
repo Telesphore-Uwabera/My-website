@@ -114,8 +114,10 @@
                     <div class="typed-text d-none">Software Engineer | Full Stack Developer | Graphic Designer | Cybersecurity Engineer | Aspire Leader |
                     </div>
                     <div class="d-flex align-items-center pt-5">
-                        <a href="TelesUwabera_CV.pdf" class="btn btn-primary py-3 px-4 me-5">Download CV</a>
-                    </div>
+    <button class="btn btn-primary py-3 px-4 me-5" onclick="downloadLinkedInProfile()">
+        Download CV
+    </button>
+</div>
                 </div>
                 <div class="col-lg-6">
                     <img class="img-fluid rounded" src="IMG_1527.jpg" style="border-radius: 50%; width:360px; height:380px;" alt="Image Description">
@@ -227,7 +229,7 @@
                             </div>
                             <div class="skill mb-4">
                                 <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Shell</h6>
+                                    <h6 class="font-weight-bold">PHP</h6>
                                     <h6 class="font-weight-bold">85%</h6>
                                 </div>
                                 <div class="progress">
@@ -649,7 +651,13 @@
         </div>
     </div>
     </div>
-    <a href="" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>    
+<script>
+    function downloadLinkedInProfile() {
+        window.open("https://www.linkedin.com/in/telesphoreuwabera/", "_blank");
+        alert("Go to the profile and use 'More' > 'Save to PDF' to download the CV.");
+    }
+</script>
     <script src="jquery-3.4.1.min.js"></script>
     <script src="bootstrap.bundle.min.js"></script>
     <script src="wow.min.js"></script>
